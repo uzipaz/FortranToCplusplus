@@ -1,0 +1,34 @@
+! This is a comment
+
+
+integer, parameter :: a = 2, b = a + 1 ! this is an another comment
+integer, parameter :: from = 2, to = 8
+integer, dimension(10) :: arr
+
+
+real :: d, e
+
+
+! This is one more comment....
+
+
+a = b + d
+arr(2) = 0
+arr(3) = a*b+c
+
+arr(4) = arr(6) - arr(5)
+
+if (.not. 1) then ! first if
+    a = a - 1 ! second one
+else if (a .lt. 10 .and. b > d) then
+    a = a + 1
+end if
+
+
+do i = 1, 10, 2
+    a = a + 1
+
+    if (a > 1) then
+        c = c + 1
+    end if
+end do

@@ -1,0 +1,42 @@
+int main() {
+// this is a comment 
+
+
+const int a = 2, b = a+1; // this is an another comment 
+const int from = 2, to = 8;
+int arr[10];
+
+
+double d, e;
+
+
+// this is one more comment . . . . 
+
+
+a=b+d; 
+arr[2-1]=0; 
+arr[3-1]=a*b+c; 
+
+arr[4-1]=arr[6-1]-arr[5-1]; 
+
+if (!1){ // first if 
+a=a-1; // second one 
+} 
+else if (a<10 && b>d){ 
+a=a+1; 
+} 
+
+
+
+for (i=1; i <= 10; i=i+2)
+{
+a=a+1; 
+
+if (a>1){ 
+c=c+1; 
+} 
+
+}
+
+return 0;
+}
