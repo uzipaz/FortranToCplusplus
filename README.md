@@ -1,4 +1,4 @@
--> ### Abstract <-
+### Abstract
 
 In this project, I attempt to translate basic constructs of Fortran90
 into equivalent C++ constructs using recursive-descent parsing of
@@ -7,7 +7,7 @@ how they differ in Fortran90 and C++, the details of how I translate
 these constructs, known issues in the project so far and what further
 work can be done to improve or advance in this program.
 
--> ### Fortran90 Introduction <-
+### Fortran90 Introduction
 
 Fortran90 is programming is a general-purpose high level programming
 language that well suited with numeric computation and scientific
@@ -16,7 +16,7 @@ constructs used in post-modern high level programming languages used
 today. In this project, I have attempted to translate the following
 Fortran90 constructs into equivalent C++.
 
-\(i) #### Expressions
+#### \(i)  Expressions
 
 Fortran90 offers typical arthmetic operators with precedence levels
 similar to high level programming languages in use today. The arithmetic
@@ -26,7 +26,7 @@ However, Expressions enclosed in parenthese can be used to alter the
 precedence of operators in expressions if necessary and both languages
 support such feature.
 
-\(ii) #### 'if' 'else' construct
+#### \(ii) 'if' 'else' construct
 
 Fortran90 offers the popular 'if else' construct which is offered by
 almost every other general puporse programming language out there. The
@@ -34,7 +34,7 @@ initial 'if' clause can be followed by 'else if' clauses and can end
 with an 'else' clause with no condition. 'if else' in C++ works in a
 similar way.
 
-\(iii) #### Loops
+#### \(iii) Loops
 
 Fortran 90 offers two types of loops. One is the basic counting loop
 that iterates from an initial given value to the final given value.
@@ -43,7 +43,7 @@ perform another iteration and 'exit' to break out of the loop. In this
 project, I only cover the basic counting loop and attempt to translate
 it into a 'for' loop.
 
-\(iv) #### Arrays
+#### \(iv) Arrays
 
 Fortran 90 can represent arrays quite flexibly such that you cannot do
 similarly in popular general purpose programming languages like C++.
@@ -54,7 +54,7 @@ from index -10 to +10. If the programmar won't specify the 'from' and
 position 1. In C++, the first element in the arrays are always accessed
 in index position 0.
 
-\(v) #### Variable Decleration
+#### \(v) Variable Decleration
 
 Variable decleration is straight forward and similar to how it is done
 in C++. The only difference is in use of keywords. In Fortran90, all
@@ -62,9 +62,9 @@ variables to be used in the program must be declared first and the
 compiler won't allow declerations after we began using assignment
 statements, if else, loop statements etc..
 
--> ### Translatation strategy <-
+### Translatation strategy
 
-\(i) #### Arrays
+#### \(i) Arrays
 
 Since C++ is very strict of index position for arrays, hence, the major
 component of this project is to successfully translate the array index
@@ -80,7 +80,7 @@ access the 2^nd^ element in Fortran90, the index will be 3. This will
 translate to 1 for use in C++ code. Moreover, I only cover
 one-dimensional arrays in this project.
 
-\(ii) #### Loops
+#### \(ii) Loops
 
 In the project, I only cover the basic counting loop used in Fortran90.
 I attempt to translate this loop into an equivalent For loop in C++. In
@@ -109,7 +109,7 @@ these values are given in identifiers then it is impossible to know at
 compile time that wether this loop will count negatively or positvely.
 Hence, I have ignored this aspect of the counting loop.
 
-\(iii) #### Evaluation of conditional statements
+#### \(iii) Evaluation of conditional statements
 
 Fortran90 does not use short-circuit evaluation of conditional
 statements. It evaluates all the conditional expressions even if it
@@ -122,7 +122,7 @@ executing these functions and the final program output may alter. Since,
 I am not covering functions in this project, I have ignored this aspect
 of the language.
 
--> ### Known Issues <-
+### Known Issues
 
 The 'symbolReader' will not recognize float/real values e.g 0.1, 10e2,
 0.1e-2 etc.. The symbolReader program is implemented in such a way that
@@ -146,7 +146,7 @@ translater will convert the comments to lower-case because the
 crucial detail and can be easily fixed but its not it was not crucial
 enough to worry about.
 
--> ### Possible Enhancements/Improvements <-
+### Possible Enhancements/Improvements
 
 First of all, we should be able to recognize floating/real constant
 values because this is the essence of Fortran language. Almost every
